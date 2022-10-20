@@ -4,7 +4,7 @@
    
 #### RUN Database(MySQL) container 
     
-    docker run --name mydb --network mynet -e MYSQL_ROOT_PASSWORD=Anas@123 -e MYSQL_USER=rundeckuser -e  MYSQL_PASSWORD=Anas@123 -v /home/anas/rundeck/dbdata:/var/lib/mysql -d mysql:latest
+    docker run --name mydb --network mynet -e MYSQL_ROOT_PASSWORD=rundeckpassword -e MYSQL_USER=rundeckuser -e  MYSQL_PASSWORD=rundeckpassword -v /home/anas/rundeck/dbdata:/var/lib/mysql -d mysql:latest
 
 ##### Exec in DB container
 
