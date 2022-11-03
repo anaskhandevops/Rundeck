@@ -33,7 +33,7 @@ RUN sudo sed -e '/dataSource.url/s/^/#/' -i  /etc/rundeck/rundeck-config.propert
 RUN sudo sed -e '/dataSource.dbCreate/s/^/#/' -i  /etc/rundeck/rundeck-config.properties
 RUN sudo sed -i 's/localhost/135.148.234.145/' /etc/rundeck/rundeck-config.properties
 RUN sudo sed '9 a dataSource.driverClassName=org.mariadb.jdbc.Driver' -i  /etc/rundeck/rundeck-config.properties
-RUN sudo sed '10 a dataSource.url=jdbc:mysql://mydb/rundeck?autoReconnect=true' -i  /etc/rundeck/rundeck-config.properties
+RUN sudo sed '10 a dataSource.url=jdbc:mysql://mydb/rundeck?autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true' -i  /etc/rundeck/rundeck-config.properties
 RUN sudo sed '11 a dataSource.username=rundeckuser' -i  /etc/rundeck/rundeck-config.properties
 RUN sudo sed '12 a dataSource.password=rundeckpassword' -i /etc/rundeck/rundeck-config.properties
 
