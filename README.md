@@ -2,7 +2,7 @@
 
     docker network create mynet
    
-#### RUN Database(MySQL) container 
+#### RUN Database(MySQL) container .
     
     docker run --name mydb --network mynet -e MYSQL_ROOT_PASSWORD=rundeckpassword -e MYSQL_USER=rundeckuser -e  MYSQL_PASSWORD=rundeckpassword -v /home/anas/rundeck/dbdata:/var/lib/mysql -d mysql:latest
 
